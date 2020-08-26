@@ -8,7 +8,7 @@ import java.util.Stack;
  * return: true
 */
 public class BalancedString {
-
+    //O(n2)
     public static boolean isBalancedOptionOne(String s){
         Stack<Character> c = new Stack<Character>();
         for (int i = 0; i < s.length(); i++){
@@ -28,6 +28,7 @@ public class BalancedString {
         return c.empty();
     }
 
+    //O(n2)
     public static boolean isBalancedOptionTwo(String s){
         Map<Character, Character> m = new LinkedHashMap<Character, Character>();
         m.put('(', ')');

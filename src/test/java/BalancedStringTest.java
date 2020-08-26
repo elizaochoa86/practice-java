@@ -9,15 +9,15 @@ public class BalancedStringTest {
     @Test
     public void isBalancedTest() {
         s = "[({})]";
-        assertTrue(BalancedString.isBalancedOptionOne(s));
-        assertTrue(BalancedString.isBalancedOptionTwo(s));
+        assertTrue(BalancedString.isBalancedOptionOne(s),"Return true because string is balanced");
+        assertTrue(BalancedString.isBalancedOptionTwo(s),"Return true because string is balanced");
     }
 
     @Test
     public void isNotBalancedTest() {
         s = "[({}";
-        assertFalse(BalancedString.isBalancedOptionOne(s));
-        assertFalse(BalancedString.isBalancedOptionTwo(s));
+        assertFalse(BalancedString.isBalancedOptionOne(s), "Return false because string is not balanced");
+        assertFalse(BalancedString.isBalancedOptionTwo(s), "Return true because string is not balanced");
     }
 
 }
