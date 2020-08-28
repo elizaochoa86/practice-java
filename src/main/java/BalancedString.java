@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Stack;
@@ -10,43 +11,49 @@ import java.util.Stack;
 public class BalancedString {
     //O(n2)
     public static boolean isBalancedOptionOne(String s){
-        Stack<Character> c = new Stack<Character>();
+        Stack<Character> characters = new Stack<Character>();
+        Character currentCharacter;
         for (int i = 0; i < s.length(); i++){
-            if(s.charAt(i) == '[' || s.charAt(i) == '(' || s.charAt(i) == '{') {
-                c.add(s.charAt(i));
+            currentCharacter = s.charAt(i);
+            if(currentCharacter == '[' || currentCharacter == '(' || currentCharacter == '{') {
+                characters.add(s.charAt(i));
             }
             else {
-                Character c1 = c.pop();
-                if (c1 != null && ((c1 == '[' && s.charAt(i) == ']') ||
-                        (c1 == '(' && s.charAt(i) == ')') ||
-                        (c1 == '{' && s.charAt(i) == '}'))) {
+                Character topCharacter = characters.pop();
+                if (topCharacter != null && ((topCharacter == '[' && s.charAt(i) == ']') ||
+                        (topCharacter == '(' && s.charAt(i) == ')') ||
+                        (topCharacter == '{' && s.charAt(i) == '}'))) {
                     continue;
                 }
                 return false;
             }
         }
-        return c.empty();
+        return characters.empty();
     }
 
     //O(n2)
     public static boolean isBalancedOptionTwo(String s){
-        Map<Character, Character> m = new LinkedHashMap<Character, Character>();
-        m.put('(', ')');
-        m.put('[', ']');
-        m.put('{', '}');
-        Stack<Character> c = new Stack<Character>();
+        Map<Character, Character> characterPairs = new HashMap<Character, Character>()
+        {{
+            put('(', ')');
+            put('[', ']');
+            put('{', '}');
+        }};
+        Character currentCharacter;
+        Stack<Character> characters = new Stack<Character>();
         for (int i = 0; i < s.length(); i++){
-            if(m.containsKey(s.charAt(i))) {
-                c.add(s.charAt(i));
+            currentCharacter = s.charAt(i);
+            if(characterPairs.containsKey(currentCharacter)) {
+                characters.add(currentCharacter);
             }
             else {
-                Character c1 = c.pop();
-                if (c1 != null && s.charAt(i) == m.get(c1)) {
+                Character topCharacter = characters.pop();
+                if (topCharacter != null && currentCharacter == characterPairs.get(topCharacter)) {
                     continue;
                 }
                 return false;
             }
         }
-        return c.empty();
+        return characters.empty();
     }
 }

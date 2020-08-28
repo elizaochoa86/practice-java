@@ -17,7 +17,7 @@ public class BalancedStringTest {
     public void isNotBalancedTest() {
         s = "[({}";
         assertFalse(BalancedString.isBalancedOptionOne(s), "Return false because string is not balanced");
-        assertFalse(BalancedString.isBalancedOptionTwo(s), "Return true because string is not balanced");
+        assertFalse(BalancedString.isBalancedOptionTwo(s), "Return false because string is not balanced");
     }
 
 }
