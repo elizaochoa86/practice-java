@@ -2,8 +2,9 @@ import java.util.Arrays;
 
 public class FibonacciNumersProblem {
 
-    /*
-     *  @see <a href="https://www.hackerrank.com/challenges/ctci-fibonacci-numbers/problem?h_r=internal-search">Link to Picking Numbers Problem</a>
+    /**
+     *  @see <a href="https://www.hackerrank.com/challenges/ctci-fibonacci-numbers/problem?h_r=internal-search">
+     * Link to Fibonacci Numbers Problem</a>
      *
      */
 
