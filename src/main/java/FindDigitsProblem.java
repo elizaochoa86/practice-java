@@ -2,7 +2,7 @@ public class FindDigitsProblem {
     /**
      * @see <a href="https://www.hackerrank.com/challenges/find-digits/problem">
      * Link to Find Digits Problem</a>
-     * @param n
+     * @param
      * @return
      */
     // Complete the findDigits function below.
