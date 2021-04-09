@@ -23,7 +23,7 @@ public class LibraryFineProblem {
         return fine;
     }
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         System.out.println(libraryFine(5,5,2014,23,2,2014));
     }
 }

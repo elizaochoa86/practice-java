@@ -29,7 +29,7 @@ public class AppendDeleteProblem {
         return result;
     }
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         String s = "aaaaaaaaaa";
         String t = "aaaaa";
         int k = 7;

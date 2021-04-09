@@ -28,7 +28,7 @@ public class PickingNumbersProblem {
 
     }
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         System.out.println(pickingNumbers(Arrays.asList(4, 6, 5, 3, 3, 1)));
     }
 }

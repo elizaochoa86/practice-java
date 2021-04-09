@@ -27,7 +27,7 @@ public class CircularArrayRotationProblem {
         return result;
     }
 
-    public static void main(String arg[]){
+    public static void main(String[] args){
         int[] a = new int[]{3, 4, 5};
         int k = 2;
         int[] queries = new int[]{1, 2};
