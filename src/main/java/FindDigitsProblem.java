@@ -18,7 +18,7 @@ public class FindDigitsProblem {
         return count;
     }
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         System.out.println(findDigits(10));
     }
 }

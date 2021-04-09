@@ -33,7 +33,7 @@ public class PermutationEquationProblem {
         return array[pos -1];
     }
 
-    public static void main(String arg[]){
+    public static void main(String[] args){
         int[] p = new int[]{5, 2, 1, 3, 4};
         //int[] p = new int[]{2, 3, 1};
         int[] result = permutationEquationSolution1(p);
